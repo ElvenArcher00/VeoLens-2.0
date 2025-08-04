@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VeoLens</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com "></script>
+
+    <style>
+      /* Optional: Ensure iframe covers full screen on mobile */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body class="w-full h-full">
+    <div class="w-full h-screen overflow-hidden">
+      <iframe
+        id="myIframe"
+        title="VeoLens Embedded"
+        class="w-full h-full border-none"
+        allow="camera; microphone; fullscreen"
+        loading="lazy"
+        sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-camera allow-microphone allow-fullscreen"
+      >
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const iframe = document.getElementById("myIframe");
+        iframe.src = "https://veolens20-10012311.chipp.ai";
+      });
+    </script>
+  </body>
+</html>
